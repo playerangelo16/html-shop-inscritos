@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pacote Exclusivo</title>
+<style>
+  body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #f0f0f0; }
+  button { padding: 15px 25px; font-size: 18px; cursor: pointer; margin: 20px; }
+  a.download { display: none; margin-top: 20px; font-size: 20px; text-decoration: none; color: white; background: green; padding: 10px 20px; border-radius: 5px; }
+</style>
+</head>
+<body>
+
+<h1>Pacote Exclusivo de Memes e Efeitos</h1>
+<p>Clique no botão para se inscrever no canal e liberar o download do pacote de 2GB!</p>
+
+<!-- Botão de inscrição -->
+<button id="subscribeBtn" onclick="subscribe()">Se inscrever no YouTube</button>
+
+<!-- Link de download (escondido no começo) -->
+<a id="downloadLink" class="download" 
+   href="https://www.mediafire.com/file/g7gapwvmxkdyq8m/pack_venda.zip/file" 
+   target="_blank">Baixar Pacote Exclusivo</a>
+
+<script>
+function subscribe() {
+    // Abre o link do YouTube para inscrição
+    window.open("https://www.youtube.com/channel/UCTKzWKYjrjuwhBc6Yk85alQ?sub_confirmation=1", "_blank");
+    
+    // Mostra o link de download
+    document.getElementById("downloadLink").style.display = "inline-block";
+    
+    // Muda o texto do botão
+    document.getElementById("subscribeBtn").innerText = "Inscrição feita! Agora baixe seu pacote.";
+    document.getElementById("subscribeBtn").disabled = true;
+}
+</script>
+
+</body>
+</html>
